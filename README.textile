@@ -1,13 +1,36 @@
-BlackbirdJs
-===========
+"BlackBird":http://www.gscottolson.com/blackbirdjs/ offers a dead-simple way to log messages in JavaScript and an attractive console to view and filter them. Although most of us are already familiar with the FireBug <code>console</code>, BlackBird supplies us with an easy, simple and Cross Browser live console that is available upfront anytime you'd like.
 
-Introduction goes here.
+"BlackBird_rails":http://github.com/eladmeidar/blackbird_rails is a plugin i created to simplify the integration of BlackBird into your rails applications, simply install it by invoking:
+<pre>
+> script/plugin install git://github.com/eladmeidar/blackbird_rails.git
+</pre> 
+
+and the required javascripts, stylesheets and images will be copied into your <code>public/</code> folder. Next thing you'll probably want to do is adding the <code>include_black_bird</code> snippet into your <code><head></code> block:
+<pre>
+<html>
+  <head>
+    <%= include_black_bird %>
+    ...
+  </head>
+</pre>
+
+Which will add the blackbird javascript and CSS tags. It's also important to point out, that the helper will only generate these tags when running the development environment, so you are hassle free regarding that matter.
+you'll still be required to remove all <code>log.something</code> calls in your javascript source, otherwise IE is going to be mad at you. 
+
+From this point on, you can use BlackBird exactly as the home page explains.
+
+h4. Quick Tip
+
+Drag this bookmartlets into your favorites toolbar and you'll be able to:
+
+<ul>
+          <li><a href="javascript:log.clear();">clear</a></li>
+          <li><a href="javascript:log.move();">move</a></li>
+          <li><a href="javascript:log.resize();">resize</a></li>
+          <li>and <a href="javascript:log.toggle();">toggle</a></li>
+</ul>
+
+your BlackBird window anytime you'd like.
 
 
-Example
-=======
-
-Example goes here.
-
-
-Copyright (c) 2009 [name of plugin creator], released under the MIT license
+Copyright (c) 2009 Elad Meidar, released under the MIT license
