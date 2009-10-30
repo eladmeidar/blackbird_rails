@@ -8,7 +8,8 @@ and the required javascripts, stylesheets and images will be copied into your <c
 </pre>
 
 Which will add the blackbird javascript and CSS tags. It's also important to point out, that the helper will only generate these tags when running the development environment, so you are hassle free regarding that matter.
-you'll still be required to remove all <code>log.something</code> calls in your javascript source, otherwise IE is going to be mad at you. 
+<del>you'll still be required to remove all <code>log.something</code> calls in your javascript source, otherwise IE is going to be mad at you. </del>
+Now stubs are generated to prevent Javascript errors if you leave the <code>log</code> calls, note that if you change the namesspace, you'll have to manually edit the helper to use the right namespace
 
 From this point on, you can use BlackBird exactly as the home page explains.
 
